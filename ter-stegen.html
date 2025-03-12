@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovators - Official Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #A50044, #004D98);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header { padding: 20px; }
+        h1 { font-size: 2.5em; background-color: #A50044; padding: 10px; border-radius: 5px; }
+        nav { background: linear-gradient(to right, #A50044, #004D98); padding: 10px 0; border-radius: 5px; }
+        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a {
+            text-decoration: none; color: white; font-size: 1.1em; font-weight: bold;
+            padding: 10px 20px; border-radius: 50px; background-color: rgba(255, 215, 0, 0.7);
+            transition: background 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover { background-color: rgba(0, 0, 0, 0.2); color: #A50044; transform: scale(1.1); }
+        section { margin: 30px auto; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 10px; width: 80%; max-width: 800px; }
+        .slideshow-container { position: relative; text-align: center; }
+        .innovator-slide { display: none; }
+        .innovator-slide.active { display: block; }
+        .innovator-slide img { width: 200px; border-radius: 10px; }
+        .prev, .next {
+            cursor: pointer; padding: 10px; background: gold; color: black;
+            border: none; border-radius: 5px; font-size: 1em; margin: 10px;
+        }
+        footer { margin-top: 50px; padding: 20px; background-color: #004D98; color: white; }
+        footer p { font-size: 1em; }
+        footer .flags-container img { width: 30px; margin: 0 10px; }
+    </style>
+</head>
+<body>
+    <header><h1>Tech Innovators</h1></header>
+    <nav>
+        <ul>
+            <li><a href="#history">Our History</a></li>
+            <li><a href="#innovators">Innovators</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#future">The Future</a></li>
+        </ul>
+    </nav>
+    <section id="history">
+        <h2>Our History</h2>
+        <p>Tech Innovators, founded in 2000, have been at the forefront of technological advancements. Our mission is to drive change through innovation and build a better tomorrow...</p>
+    </section>
+    <section id="innovators">
+        <h2>Innovators Who Changed the World</h2>
+        <div class="slideshow-container">
+            <div class="innovator-slide active">
+                <img src="https://via.placeholder.com/200" alt="Steve Jobs">
+                <p>Steve Jobs (Co-Founder of Apple)</p>
+                <ul>
+                    <li>Steve Jobs revolutionized personal computing and the tech industry. His vision for user-friendly technology has shaped the modern world.</li>
+                </ul>
+            </div>
+            <div class="innovator-slide">
+                <img src="https://via.placeholder.com/200" alt="Elon Musk">
+                <p>Elon Musk (Founder of Tesla & SpaceX)</p>
+                <ul>
+                    <li>Elon Musk is a visionary entrepreneur leading companies like Tesla and SpaceX to push the boundaries of electric cars, space exploration, and more.</li>
+                </ul>
+            </div>
+            <div class="innovator-slide">
+                <img src="https://via.placeholder.com/200" alt="Ada Lovelace">
+                <p>Ada Lovelace (Mathematician & Computer Programmer)</p>
+                <ul>
+                    <li>Ada Lovelace is considered one of the first computer programmers. Her work laid the foundation for modern computing systems.</li>
+                </ul>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </div>
+    </section>
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Created the first consumer-friendly smartphone (iPhone)</li>
+            <li>Developed reusable rockets (SpaceX)</li>
+            <li>Created an AI-powered car that drives itself (Tesla)</li>
+        </ul>
+    </section>
+    <section id="future">
+        <h2>The Future</h2>
+        <p>As we continue to innovate, our vision is to help solve humanity's greatest challenges. From sustainable energy to space exploration, we’re committed to shaping a brighter future...</p>
+    </section>
+    <footer>
+        <p>Tech Innovators © 2024</p>
+        <div class="flags-container">
+            <img src="https://via.placeholder.com/30" alt="Tech Innovators Flag">
+        </div>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.innovator-slide');
+        function changeSlide(step) {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + step + slides.length) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>
