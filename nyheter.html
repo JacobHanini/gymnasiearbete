@@ -4,33 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyheter</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .news-container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .news-item {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .news-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .news-date {
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Hem</a></li>
-                
-                <li><a href="nyheter.html">Nyheter</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Senaste Nyheter</h1>
-        <section>
-            <article>
-                <h2>Nyhetstitel 1</h2>
-                <p>Här är en kort beskrivning av den senaste nyheten.</p>
-            </article>
-            <article>
-                <h2>Nyhetstitel 2</h2>
-                <p>Här är en annan intressant nyhet.</p>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Din Webbplats. Alla rättigheter förbehållna.</p>
-    </footer>
+    <header>Nyheter</header>
+    <nav>
+        <a href="index.html">Hem</a>
+        <a href="nyheter.html">Nyheter</a>
+        <a href="#">Om oss</a>
+    </nav>
+    <div class="news-container">
+        <div class="news-item">
+            <div class="news-title">Nyhetstitel 1</div>
+            <div class="news-date">Publicerad: 19 mars 2025</div>
+            <div class="news-content">Detta är en kort beskrivning av nyheten. Läs mer för att få hela artikeln.</div>
+        </div>
+        <div class="news-item">
+            <div class="news-title">Nyhetstitel 2</div>
+            <div class="news-date">Publicerad: 18 mars 2025</div>
+            <div class="news-content">En annan spännande nyhet. Håll dig uppdaterad!</div>
+        </div>
+    </div>
 </body>
 </html>
